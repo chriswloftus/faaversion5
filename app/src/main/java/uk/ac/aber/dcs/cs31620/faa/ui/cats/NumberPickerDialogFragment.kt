@@ -54,11 +54,11 @@ class NumberPickerDialogFragment : DialogFragment() {
         builder.setTitle(R.string.choose_dialog_title)
         builder.setMessage(message)
 
-        builder.setPositiveButton(R.string.ok_button_text){dialog, which ->
+        builder.setPositiveButton(R.string.ok_button_text){ _, _ ->
             valueChangeListener?.onValueChange(numberPicker, numberPicker.value, numberPicker.value)
         }
 
-        builder.setNegativeButton(R.string.cancel_button_text){dialog, which ->}
+        builder.setNegativeButton(R.string.cancel_button_text){ _, _ ->}
 
         builder.setView(numberPicker)
         return builder.create()
